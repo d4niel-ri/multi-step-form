@@ -70,7 +70,11 @@ const PersonalInfo = ({ info }) => {
   }
 
   const validateInputs = () => {
-    if (!validateName() || !validateEmail() || !validatePhoneNumber()) {
+    const isValidatedName = validateName();
+    const isValidatedEmail = validateEmail();
+    const isValidatedPhoneNumber = validatePhoneNumber();
+
+    if (!isValidatedName || !isValidatedEmail || !isValidatedPhoneNumber) {
       return false;
     }
 
