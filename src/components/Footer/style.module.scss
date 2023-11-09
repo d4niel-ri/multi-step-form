@@ -1,0 +1,51 @@
+@import '@styles/base';
+
+footer {
+  width: 100%;
+  justify-self: flex-end;
+
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .back {
+      width: 5rem;
+      color: $color-cool-gray;
+      text-transform: capitalize;
+    }
+  
+    .back:hover {
+      color: $color-marine-blue;
+      background-color: transparent;
+    }
+  
+    .back:active {
+      color: $color-marine-blue;
+    }
+  
+    .next {
+      margin-left: auto;
+      color: $color-white;
+      width: 6rem;
+      text-transform: capitalize;
+      background-color: $color-marine-blue;
+    }
+  }
+
+  @media screen and (max-width: $screen-md-limit) {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    padding: 1rem 0;
+    background-color: $color-white;
+    display: flex;
+    justify-content: center;
+
+    .content {
+      width: 90%;
+      max-width: 30rem;
+    }
+  }
+}

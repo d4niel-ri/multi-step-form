@@ -1,0 +1,51 @@
+@import '@styles/base';
+
+.form_add_ons {
+  width: 90%;
+  height: 100%;
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .content {
+    h2 {
+      margin-top: 2rem;
+      color: $color-marine-blue;
+    } 
+  
+    p {
+      margin-top: 0.25rem;
+      color: $color-cool-gray;
+    }
+
+    .checkboxes {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+  }
+
+  @media screen and (max-width: $screen-md-limit) {
+    width: 100%;
+    max-width: none;
+
+    .content {
+      width: 90%;
+      max-width: 30rem;
+      position: absolute;
+      z-index: 5;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      padding: 1.5rem;
+      border-radius: 10px;
+      background-color: $color-white;
+
+      h2 {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

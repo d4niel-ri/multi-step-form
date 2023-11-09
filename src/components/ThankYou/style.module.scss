@@ -1,0 +1,69 @@
+@import '@styles/base';
+
+.thank_you {
+  width: 90%;
+  height: 100%;
+  max-width: 25rem;
+
+  .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .image {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+  
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  
+    h2 {
+      margin-top: 1rem;
+      font-size: 30px;
+      font-weight: 700;
+      color: $color-marine-blue;
+    }
+  
+    .message {
+      margin-top: 0.75rem;
+      text-align: center;
+      color: $color-cool-gray
+    }
+  
+    .btn {
+      margin-top: 3rem;
+    }
+  }
+
+  @media screen and (max-width: $screen-md-limit) {
+    width: 100%;
+    max-width: none;
+
+    .content {
+      width: 90%;
+      height: 40%;
+      max-width: 30rem;
+      position: absolute;
+      z-index: 5;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      padding: 1.5rem;
+      border-radius: 10px;
+      background-color: $color-white;
+
+      h2 {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

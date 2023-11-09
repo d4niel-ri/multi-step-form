@@ -1,0 +1,5 @@
+export const SET_STEP = 'HOME/SET_STEP';
+export const SET_INFO = 'HOME/SET_INFO';
+export const SET_PLAN_TYPE = 'HOME/SET_PLAN_TYPE';
+export const SET_PLAN_DURATION = 'HOME/SET_PLAN_DURATION';
+export const SET_PLAN_ADD_ONS = 'HOME/SET_PLAN_ADD_ONS';

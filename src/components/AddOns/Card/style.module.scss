@@ -1,0 +1,62 @@
+@import '@styles/base';
+
+.card {
+  width: 100%;
+  height: 5rem;
+  padding: 0.75rem;
+  border: 1px solid $color-light-gray;
+  border-radius: 7px;
+  transition: background-color 0.3s;
+  transition: border 0.3s;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .card_left {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    input[type="checkbox"] {
+      width: 1rem;
+      height: 1rem;
+      accent-color: $color-purplish-blue;
+      border: 1px solid $color-light-gray !important;
+      color: $color-light-gray;
+    }
+
+    .card_subleft {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+
+      h3 {
+        color: $color-marine-blue;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      p {
+        margin-top: 0;
+        font-size: 16px;
+        color: $color-cool-gray;
+      }
+    }
+  }
+
+  .price {
+    color: $color-purplish-blue;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+.card:hover {
+  border-color: $color-marine-blue;
+}
+
+.card.selected {
+  border-color: $color-marine-blue;
+  background-color: $color-alabaster;
+}

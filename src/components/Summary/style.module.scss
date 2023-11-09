@@ -1,0 +1,133 @@
+@import '@styles/base';
+
+.form_finishing {
+  width: 90%;
+  height: 100%;
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .content {
+    h2 {
+      margin-top: 2rem;
+      color: $color-marine-blue;
+    } 
+  
+    p {
+      margin-top: 0.25rem;
+      color: $color-cool-gray;
+    }
+
+    .receipt {
+      margin-top: 2rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1rem;
+      border-radius: 10px;
+      background-color: $color-magnolia;
+
+      .main_receipt {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h3 {
+          color: $color-marine-blue;
+          font-size: 18px;
+          font-weight: 700;
+        }
+
+        .main_left {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+
+          h3 {
+            text-transform: capitalize;
+          }
+
+          .change {
+            color: $color-cool-gray;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: underline;
+            cursor: pointer;
+            transition: color 0.3s;
+          }
+
+          .change:hover, .change:active {
+            color: $color-purplish-blue;
+          }
+        }
+      }
+
+      hr {
+        border-top: 1px solid $color-alabaster;
+      }
+
+      .add_ons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 16px;
+
+        .add_on {
+          display: flex;
+          justify-content: space-between;
+
+          .name {
+            color: $color-cool-gray;
+          }
+
+          .price {
+            color: $color-marine-blue;
+          }
+        }
+      }
+    }
+
+    .total {
+      padding: 0 1rem;
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .desc {
+        font-size: 16px;
+        color: $color-cool-gray;
+      }
+
+      .price {
+        font-size: 20px;
+        font-weight: 700;
+        color: $color-purplish-blue;
+      }
+    }
+  }
+
+  @media screen and (max-width: $screen-md-limit) {
+    width: 100%;
+    max-width: none;
+
+    .content {
+      width: 90%;
+      max-width: 30rem;
+      position: absolute;
+      z-index: 5;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      padding: 1.5rem;
+      border-radius: 10px;
+      background-color: $color-white;
+
+      h2 {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

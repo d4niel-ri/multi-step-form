@@ -1,0 +1,73 @@
+@import '@styles/base';
+
+.pricing_option_card {
+  width: 7rem;
+  height: 8rem;
+  padding: 0.75rem;
+  border: 1px solid $color-light-gray;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  transition: border 0.3s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .image {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .desc {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  h3 {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-marine-blue;
+  }
+
+  p {
+    font-size: 16px;
+    color: $color-cool-gray;
+  }
+
+  .free {
+    font-size: 14px;
+    color: $color-marine-blue;
+  }
+
+  @media screen and (max-width: $screen-md-limit) {
+    width: 100%;
+    height: 5.5rem;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: flex-start;
+
+    .image {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}
+
+.pricing_option_card:hover {
+  border-color: $color-marine-blue;
+}
+
+.pricing_option_card.selected {
+  border-color: $color-marine-blue;
+  background-color: $color-alabaster;
+}
